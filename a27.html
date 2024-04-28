@@ -3,98 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theme Switcher</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <title>Animal Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* Default light theme background color */
+      color: #333; /* Default text color */
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0;
+      padding: 0;
+    }
 
-<style>
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
 
-body {
-  transition: background-color 0.5s ease;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+    .card {
+      background-color: #fff; /* Default card background color */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  .theme-icon{
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
+  width:35px;
+  height:35px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 10px 10px;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+.theme-dark{
+  background-color: black;
+  color:#ffff;
+
 }
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.theme-light{
+  background-color:white;
+  color:black;
 }
+  </style>
+</head>
+<body class="light-theme">
 
-</style>
-<body>
-  <div class="container">
-    <h1>Theme Switcher</h1>
-    <label class="switch">
-      <input type="checkbox" id="themeSwitch">
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <script src="script.js">
-
-const themeSwitch = document.getElementById('themeSwitch');
-
-themeSwitch.addEventListener('change', () => {
-  document.body.classList.toggle('dark-theme');
-});
-
-  </script>
+<div class="container">
+    <div class="container-fluid  ">
+        <img src="dark-mode (2).png" class="theme-icon ms-3" id="img-dark" onclick="darkMode()" />
+        <img src="light-mode (1).png" class="theme-icon ms-3" id="img-light" onclick="lightMode()" />
+      </div>
   
+  <div class="card">
+    <h2>Lion</h2>
+    <p>The lion (Panthera leo) is a species in the family Felidae and a member of the genus Panthera. It is most recognized for its muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail.</p>
+  </div>
+
+  <div class="card">
+    <h2>Elephant</h2>
+    <p>Elephants are large mammals of the family Elephantidae and the order Proboscidea. They are herbivores, and they are identified by their long trunk, large ears, and wide, flat feet.</p>
+  </div>
+
+  <div class="card">
+    <h2>Wolf</h2>
+    <p>The wolf (Canis lupus), also known as the gray/grey wolf or timber wolf, is a canine native to the wilderness and remote areas of Eurasia and North America. It is the largest extant member of its family, with males averaging 40 kg (88 lb) and females 37 kg (82 lb).</p>
+  </div>
+</div>
+
+<script>
+  function darkMode() {
+    document.body.classList.remove('light-theme');
+    document.body.classList.add('dark-theme');
+  }
+
+  function lightMode() {
+    document.body.classList.remove('dark-theme');
+    document.body.classList.add('light-theme');
+  }
+
+  
+</script>
+
 </body>
 </html>
