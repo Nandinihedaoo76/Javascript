@@ -32,6 +32,15 @@ You can find various JavaScript code snippets in this repository, covering diffe
 
 Feel free to explore and use these snippets in your projects!
 
+Here's a sample code snippet:
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet('World');
+
 ## Contributing
 
 Contributions are welcome! If you have any improvements or new projects to add, feel free to open a pull request. Please ensure that your code follows the repository's coding standards and includes appropriate documentation.
