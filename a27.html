@@ -37,23 +37,23 @@
   margin: 10px 10px;
 }
 
-.theme-dark{
+.dark-theme{
   background-color: black;
-  color:#ffff;
+  color:black;
 
 }
-.theme-light{
+.light-theme{
   background-color:white;
   color:black;
 }
   </style>
 </head>
-<body class="light-theme">
+<body class="light-theme" id="bdy">
 
 <div class="container">
     <div class="container-fluid  ">
-        <img src="dark-mode (2).png" class="theme-icon ms-3" id="img-dark" onclick="darkMode()" />
-        <img src="light-mode (1).png" class="theme-icon ms-3" id="img-light" onclick="lightMode()" />
+       <img src="dark-mode (2).png" class="theme-icon ms-3" id="img-dark" onclick="darkMode()"/>
+       <img src="light-mode (1).png" class="theme-icon ms-3" id="img-light" onclick="lightMode()"/>
       </div>
   
   <div class="card">
@@ -74,13 +74,15 @@
 
 <script>
   function darkMode() {
-    document.body.classList.remove('light-theme');
-    document.body.classList.add('dark-theme');
+    let a =document.getElementById('bdy');
+    a.classList.add('dark-theme');
+    a.classList.remove('light-theme');
   }
 
   function lightMode() {
-    document.body.classList.remove('dark-theme');
-    document.body.classList.add('light-theme');
+    let a =document.getElementById('bdy');
+    a.classList.remove('dark-theme');
+    a.classList.add('light-theme');
   }
 
   
