@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on/off toggler</title>
+</head>
+<body>
+    <h1 align="center">BULB ON/OFF TOGGLER ⚡</h1>
+    <img src="https://t3.ftcdn.net/jpg/02/83/70/82/240_F_283708204_NHIcrt8HDMrQZtjD4aP3Y0oVA5WMW9ek.jpg" id="bulb" height="300px" style="margin-left: 39%;">
+    <br> <br>
+    <button type="button" onclick="toggleBulb()" style="margin-left: 54%;">
+        TOGGLE
+    </button>
+    <script>
+        const bulbElement = document.getElementById('bulb');
+        let state = false;
+        function toggleBulb() 
+        {
+            if(state==false)   
+            {
+                bulbElement.src = 'https://t3.ftcdn.net/jpg/02/83/70/88/240_F_283708865_WhsoarfUiHWK9dludJXJivIskG6SyImL.jpg';
+                state = true;
+            }  
+            else
+            {
+                bulbElement.src = 'https://t3.ftcdn.net/jpg/02/83/70/82/240_F_283708204_NHIcrt8HDMrQZtjD4aP3Y0oVA5WMW9ek.jpg';
+                state = false;
+            }
+        }
+    </script>
+</body>
+</html>
